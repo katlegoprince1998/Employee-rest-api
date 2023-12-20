@@ -2,13 +2,15 @@ package com.codeworld.employeeapp.controller;
 
 import com.codeworld.employeeapp.entity.Employee;
 import com.codeworld.employeeapp.service.EmployeeService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-
+@CrossOrigin(origins = "http://localhost:3003")
 @RequestMapping("/api")
 @RestController
 public class EmployeeController {
+    @Autowired
     private EmployeeService service;
 
     @GetMapping("/")

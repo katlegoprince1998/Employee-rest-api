@@ -19,12 +19,8 @@ public class Employee {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
-    @Max(20)
     private String name;
-    @Max(20)
     private String lastname;
-    @Email
     private String email;
-    @Max(25)
     private String phone;
 }

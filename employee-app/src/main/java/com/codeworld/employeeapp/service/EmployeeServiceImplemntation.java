@@ -49,7 +49,8 @@ public class EmployeeServiceImplemntation implements EmployeeService{
 
     @Override
     public void deleteEmployee(Long id) {
-      repository.deleteById(id);
+      Employee employee = repository.findById(id).get();
+      repository.delete(employee);
     }
 
     @Override
